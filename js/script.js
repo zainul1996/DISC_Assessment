@@ -1,4 +1,4 @@
-console.log("v2")
+console.log("v3")
 const inData = [
   [["Easy going, Agreeable",
     "Trusting, Believing in others",
