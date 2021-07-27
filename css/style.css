@@ -1,0 +1,42 @@
+@media screen and (max-width: 425px) {
+  .col.s8.l8 {
+    font-size: 12.3px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .shorter {
+    visibility: visible;
+    position: relative;
+  }
+  .longer {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shorter {
+    visibility: hidden;
+    position: absolute;
+  }
+  .longer {
+    visibility: visible;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shorter {
+    visibility: hidden;
+    position: absolute;
+  }
+  .longer {
+    visibility: visible;
+    position: relative;
+  }
+}
+
+.row .col.s2 {
+  width: 16%;
+}
