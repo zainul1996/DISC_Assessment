@@ -145,6 +145,7 @@ const inData = [
       "Hold high standards, Accurate"], ["-", "I", "D", "C"], ["S", "I", "-", "-"]
   ]
 ]
+
 most_classification = {
   "D": {
     "0": 3,
@@ -560,6 +561,24 @@ function getPrev() {
   return prevValue
 }
 
+
+function finalCard(public_result, private_result, perceived_result) {
+  return `<div class="card grey darken-3 animate__animated animate__backInRight">
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#test4">Public</a></li>
+                <li class="tab"><a href="#test5">Private</a></li>
+                <li class="tab"><a href="#test6">Perceived</a></li>
+              </ul>
+            </div>
+          <div class="card-content grey lighten-4">
+            <div id="test4">${public_result}</div>
+            <div id="test5">${private_result}</div>
+            <div id="test6">${perceived_result}</div>
+          </div>
+        </div>`
+}
+
 function nextCard() {
   let questions = getNext()
   return `<div class="card grey darken-3 animate__animated animate__backInRight">
@@ -855,8 +874,14 @@ function computeBehavior() {
 
   let most_result = sort_object({ "D": most_classified_D, "I": most_classified_I, "S": most_classified_S, "C": most_classified_C })
   console.log(most_result)
-  alert(most_result)
-
+  public_result = ""
+  // alert(most_result)
+  for (var key of Object.keys(most_result)) {
+    console.log(key + " -> " + most_result[key])
+    if (parseInt(most_result[key]) > 16) {
+      public_result += key
+    }
+  }
 
 
   const leastCounts = {};
@@ -887,7 +912,14 @@ function computeBehavior() {
 
   let least_result = sort_object({ "D": least_classified_D, "I": least_classified_I, "S": least_classified_S, "C": least_classified_C })
   console.log(least_result)
-  alert(least_result)
+  // alert(least_result)
+  private_result = ""
+  for (var key of Object.keys(least_result)) {
+    console.log(key + " -> " + least_result[key])
+    if (parseInt(least_result[key]) > 16) {
+      private_result += key
+    }
+  }
 
 
   const changed_D = most_D - least_D
@@ -906,30 +938,46 @@ function computeBehavior() {
 
   let changed_result = sort_object({ "D": changed_classified_D, "I": changed_classified_I, "S": changed_classified_S, "C": changed_classified_C })
   console.log(changed_result)
-  alert(changed_result.keys)
+  // alert(changed_result.keys)
+
+  perceived_result = ""
+  for (var key of Object.keys(changed_result)) {
+    console.log(key + " -> " + changed_result[key])
+    if (parseInt(changed_result[key]) > 16) {
+      perceived_result += key
+    }
+  }
 }
 
 function renderNextCard() {
   if (!(typeof getMostValue() === 'undefined' || typeof getLeastValue() === 'undefined')) {
-
     most[currIndex] = getMostValue()
     least[currIndex] = getLeastValue()
     currIndex++
+    animateOutLeft()
     if (inData.length == 0) {
       computeBehavior()
-      alert()
+      sleep(380).then(() => {
+        $('.col.s12.m10.offset-m1.l8.offset-l2').empty()
+        $('.col.s12.m10.offset-m1.l8.offset-l2').append(
+          finalCard(public_result, private_result, perceived_result)
+        )
+        $('.tabs').tabs();
+      });
+    } else {
+      sleep(380).then(() => {
+        $('.col.s12.m10.offset-m1.l8.offset-l2').empty()
+        $('.col.s12.m10.offset-m1.l8.offset-l2').append(
+          nextCard()
+        )
+        if (most[currIndex] != 0) {
+          $("input[name=most][value=" + most[currIndex] + "]").prop('checked', true);
+          $("input[name=least][value=" + least[currIndex] + "]").prop('checked', true);
+        }
+      });
+
     }
-    animateOutLeft()
-    sleep(380).then(() => {
-      $('.col.s12.m10.offset-m1.l8.offset-l2').empty()
-      $('.col.s12.m10.offset-m1.l8.offset-l2').append(
-        nextCard()
-      )
-      if (most[currIndex] != 0) {
-        $("input[name=most][value=" + most[currIndex] + "]").prop('checked', true);
-        $("input[name=least][value=" + least[currIndex] + "]").prop('checked', true);
-      }
-    });
+
   }
   else {
     // animate__animated animate__shakeX
