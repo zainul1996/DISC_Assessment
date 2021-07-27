@@ -144,7 +144,7 @@ const inData = [
       "Hold high standards, Accurate"], ["-", "I", "D", "C"], ["S", "I", "-", "-"]
   ]
 ]
-most_classfication = {
+most_classification = {
   "D": {
     "0": 3,
     "1": 5,
@@ -342,7 +342,7 @@ least_classification = {
   }
 }
 
-change_classfication = {
+change_classification = {
   "D": {
     "-23": 0.25,
     "-22": 0.5,
@@ -846,6 +846,16 @@ function computeBehavior() {
   }
   console.log(`MOST - D:${most_D} I:${most_I} S:${most_S} C:${most_C} -:${most_}`)
 
+  const most_classified_D = most_classification["D"][most_D]
+  const most_classified_I = most_classification["I"][most_I]
+  const most_classified_S = most_classification["S"][most_S]
+  const most_classified_C = most_classification["C"][most_C]
+  console.log(`CLASSIFIED MOST - D:${most_classified_D} I:${most_classified_I} S:${most_classified_S} C:${most_classified_C}`)
+
+  let most_result = sort_object({ "D": most_classified_D, "I": most_classified_I, "S": most_classified_S, "C": most_classified_C })
+  console.log(most_result)
+  alert(most_result)
+
 
 
   const leastCounts = {};
@@ -868,6 +878,17 @@ function computeBehavior() {
   }
   console.log(`LEAST - D:${least_D} I:${least_I} S:${least_S} C:${least_C} -:${least_}`)
 
+  const least_classified_D = least_classification["D"][least_D]
+  const least_classified_I = least_classification["I"][least_I]
+  const least_classified_S = least_classification["S"][least_S]
+  const least_classified_C = least_classification["C"][least_C]
+  console.log(`CLASSIFIED LEAST - D:${least_classified_D} I:${least_classified_I} S:${least_classified_S} C:${least_classified_C}`)
+
+  let least_result = sort_object({ "D": least_classified_D, "I": least_classified_I, "S": least_classified_S, "C": least_classified_C })
+  console.log(least_result)
+  alert(least_result)
+
+
   const changed_D = most_D - least_D
   const changed_I = most_I - least_I
   const changed_S = most_S - least_S
@@ -876,14 +897,15 @@ function computeBehavior() {
   console.log(`CHANGED - D:${changed_D} I:${changed_I} S:${changed_S} C:${changed_C} -:${changed_}`)
 
 
-  const changed_classified_D = change_classfication["D"][changed_D]
-  const changed_classified_I = change_classfication["I"][changed_I]
-  const changed_classified_S = change_classfication["S"][changed_S]
-  const changed_classified_C = change_classfication["C"][changed_C]
+  const changed_classified_D = change_classification["D"][changed_D]
+  const changed_classified_I = change_classification["I"][changed_I]
+  const changed_classified_S = change_classification["S"][changed_S]
+  const changed_classified_C = change_classification["C"][changed_C]
   console.log(`CLASSIFIED CHANGED - D:${changed_classified_D} I:${changed_classified_I} S:${changed_classified_S} C:${changed_classified_C}`)
 
-  let result = sort_object({ "D": changed_classified_D, "I": changed_classified_I, "S": changed_classified_S, "C": changed_classified_C })
-  console.log(result)
+  let changed_result = sort_object({ "D": changed_classified_D, "I": changed_classified_I, "S": changed_classified_S, "C": changed_classified_C })
+  console.log(changed_result)
+  alert(changed_result.keys)
 }
 
 function renderNextCard() {
