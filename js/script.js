@@ -666,15 +666,23 @@ function nextCard() {
                 </div>
               </div>
             </div>
-            <div class="card-action">
+            <div class="card-action" style="text-align: center">
               <button
                 id="prevbtn"
                 class="btn waves-effect waves-light light-blue"
+                style="float: left"
                 type="submit"
                 onclick="renderPrevCard()"
                 name="action">
                 Prev
               </button>
+              <div class="c100 p${parseInt((((outData.length - 1) / 28).toFixed(2)) * 100)} progress-indicator" style="float:none; position: relative;display: inline-block;overflow: hidden;vertical-align: middle;">
+                <span style="color: #307bbb">${parseInt((((outData.length - 1) / 28).toFixed(2)) * 100)}%</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
+              </div>
               <button
                 id="nextbtn"
                 class="btn waves-effect waves-light right light-blue"
@@ -774,15 +782,23 @@ function prevCard() {
                 </div>
               </div>
             </div>
-            <div class="card-action">
+            <div class="card-action" style="text-align: center">
               <button
                 id="prevbtn"
                 class="btn waves-effect waves-light light-blue"
+                style="float: left"
                 type="submit"
                 onclick="renderPrevCard()"
                 name="action">
                 Prev
               </button>
+              <div class="c100 p${parseInt((((outData.length - 1) / 28).toFixed(2)) * 100)} progress-indicator" style="float:none; position: relative;display: inline-block;overflow: hidden;vertical-align: middle;">
+                <span style="color: #307bbb">${parseInt((((outData.length - 1) / 28).toFixed(2)) * 100)}%</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
+              </div>
               <button
                 id="nextbtn"
                 class="btn waves-effect waves-light right light-blue"
@@ -992,18 +1008,30 @@ function renderNextCard() {
 }
 
 function renderPrevCard() {
-  animateOutRight()
-  currIndex--
-  sleep(380).then(() => {
-    $('.col.s12.m10.offset-m1.l8.offset-l2').empty()
-    $('.col.s12.m10.offset-m1.l8.offset-l2').append(
-      prevCard()
-    )
-    if (most[currIndex] != 0) {
-      $("input[name=most][value=" + most[currIndex] + "]").prop('checked', true);
-      $("input[name=least][value=" + least[currIndex] + "]").prop('checked', true);
+  if (outData.length > 1) {
+    animateOutRight()
+    currIndex--
+    sleep(380).then(() => {
+      $('.col.s12.m10.offset-m1.l8.offset-l2').empty()
+      $('.col.s12.m10.offset-m1.l8.offset-l2').append(
+        prevCard()
+      )
+      if (most[currIndex] != 0) {
+        $("input[name=most][value=" + most[currIndex] + "]").prop('checked', true);
+        $("input[name=least][value=" + least[currIndex] + "]").prop('checked', true);
+      }
+    });
+  }
+  else {
+    // animate__animated animate__shakeX
+    $('.col.s12.m10.offset-m1.l8.offset-l2').addClass('animate__animated').addClass('animate__shakeX')
+    // wait for animation to finish then remove class
+    sleep(400).then(() => {
+      $('.col.s12.m10.offset-m1.l8.offset-l2').removeClass('animate__animated').removeClass('animate__shakeX')
     }
-  });
+    )
+  }
+
 }
 
 $(document).ready(() => {

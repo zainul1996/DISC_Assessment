@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -13,18 +14,38 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="css/circle.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/test.js"></script> -->
+    <style>
+      .container {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        max-width: none;
+      }
+
+      .container .row {
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <div class="row content-container">
-        <div class="col s12 m10 offset-m1 l8 offset-l2"></div>
+      <div class="row valign-wrapper">
+        <div class="col s12 m10 offset-m1 l8 offset-l2 valign">
+          <div class="card">
+            <div class="card-content">
+                <span>Most</span>
+                <span>Least</span>
+            </div>
+        </div>
       </div>
     </div>
   </body>
