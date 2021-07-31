@@ -11,139 +11,139 @@ const inData = [
       "Optimistic, Visionary",
       "Center of attention, Sociable",
       "Peacemaker, Bring harmony"], ["C", "D", "-", "S"], ["-", "D", "I", "S"]
-  ],
-  [
-    ["Encourage others",
-      "Strive for perfection",
-      "Be part of the team",
-      "Want to establish goals"], ["I", "-", "-", "D"], ["I", "C", "S", "-"]
-  ],
-  [
-    ["Become frustrated",
-      "Keep my feelings inside",
-      "Tell my side of the story",
-      "Stand up to opposition"], ["C", "S", "-", "D"], ["C", "S", "I", "D"]
-  ],
-  [
-    ["Lively, Talkative",
-      "Fast paced, Determined",
-      "Try to maintain balance",
-      "Try to follow the rules"], ["I", "D", "S", "-"], ["-", "D", "S", "C"]
-  ],
-  [
-    ["Manage time efficiently",
-      "Often rushed, Feel pressured",
-      "Social things are important",
-      "Like to finish what I start"], ["C", "D", "I", "S"], ["-", "D", "I", "S"]
-  ],
-  [
-    ["Resist sudden change",
-      "Tend to over promise",
-      "Withdraw under pressure",
-      "Not afraid to fight"], ["S", "I", "-", "-"], ["-", "I", "C", "D"]
-  ],
-  [
-    ["A good encourager",
-      "A good listener",
-      "A good analyzer",
-      "A good delegator"], ["I", "S", "C", "D"], ["I", "S", "C", "D"]
-  ],
-  [
-    ["Results are what matter",
-      "Do it right, Accuracy counts",
-      "Make it enjoyable",
-      "Let's do it together"], ["D", "C", "-", "-"], ["D", "C", "I", "S"]
-  ],
-  [
-    ["Will do without, Self-controlled",
-      "Will buy on impulse",
-      "Will wait, No pressure",
-      "Will spend on what I want"], ["-", "D", "S", "I"], ["C", "D", "S", "-"]
-  ],
-  [
-    ["Friendly, Easy to be with",
-      "Unique, Bored by routine",
-      "Actively change things",
-      "Want things exact"], ["S", "-", "D", "C"], ["-", "I", "D", "C"]
-  ],
-  [
-    ["Non-confrontational, Giving in",
-      "Overloaded with details",
-      "Changes at the last minute",
-      "Demanding, Abrupt"], ["-", "C", "I", "D"], ["S", "-", "I", "D"]
-  ],
-  [
-    ["Want advancement",
-      "Satisfied with things, Content",
-      "Openly display feelings",
-      "Humble, Modest"], ["D", "S", "I", "-"], ["D", "-", "-", "C"]
-  ],
-  [
-    ["Cool, Reserved",
-      "Happy, Carefree",
-      "Pleasing, Kind",
-      "Bold, Daring"], ["C", "I", "S", "D"], ["C", "I", "-", "D"]
-  ],
-  [
-    ["Spend quality time with others",
-      "Plan for the future, Be prepared",
-      "Travel to new adventures",
-      "Receive rewards for goals met"], ["S", "C", "I", "D"], ["S", "-", "I", "D"]
-  ],
-  [
-    ["Rules need to be challenged",
-      "Rules make it fair",
-      "Rules make it boring",
-      "Rules make it safe"], ["-", "C", "I", "S"], ["D", "-", "I", "S"]
-  ],
-  [
-    ["Education, Culture",
-      "Achievements, Awards",
-      "Safety, Security",
-      "Social, Group Gatherings"], ["-", "D", "S", "I"], ["C", "D", "S", "-"]
-  ],
-  [
-    ["Take charge, Direct approach",
-      "Outgoing, Enthusiastic",
-      "Predictable, Consistent",
-      "Cautious, Careful"], ["D", "-", "-", "C"], ["D", "I", "S", "-"]
-  ],
-  [
-    ["Not easily defeated",
-      "Will do as told, Follows leader",
-      "Excitable, Cheerful",
-      "Want things orderly, Neat"], ["D", "S", "I", "-"], ["D", "-", "I", "C"]
-  ],
-  [
-    ["I will lead them",
-      "I will follow through",
-      "I will persuade them",
-      "I will get the facts"], ["D", "S", "I", "C"], ["-", "S", "I", "-"]
-  ],
-  [
-    ["Think of others first",
-      "Competitive, Like a challenge",
-      "Optimistic, Positive",
-      "Logical thinker, Systematic"], ["S", "D", "I", "-"], ["S", "D", "I", "C"]
-  ],
-  [
-    ["Please others, Agreeable",
-      "Laugh out loud, Animated",
-      "Courageous, Bold",
-      "Quiet, Reserved"], ["S", "-", "D", "C"], ["S", "I", "D", "C"]
-  ],
-  [
-    ["Want more authority",
-      "Want new opportunities",
-      "Avoid any conflict",
-      "Want clear directions"], ["-", "I", "S", "-"], ["D", "-", "S", "C"]
-  ],
-  [
-    ["Reliable, Dependable",
-      "Creative, Unique",
-      "Bottom line, Results oriented",
-      "Hold high standards, Accurate"], ["-", "I", "D", "C"], ["S", "I", "-", "-"]
   ]
+  // [
+  //   ["Encourage others",
+  //     "Strive for perfection",
+  //     "Be part of the team",
+  //     "Want to establish goals"], ["I", "-", "-", "D"], ["I", "C", "S", "-"]
+  // ],
+  // [
+  //   ["Become frustrated",
+  //     "Keep my feelings inside",
+  //     "Tell my side of the story",
+  //     "Stand up to opposition"], ["C", "S", "-", "D"], ["C", "S", "I", "D"]
+  // ],
+  // [
+  //   ["Lively, Talkative",
+  //     "Fast paced, Determined",
+  //     "Try to maintain balance",
+  //     "Try to follow the rules"], ["I", "D", "S", "-"], ["-", "D", "S", "C"]
+  // ],
+  // [
+  //   ["Manage time efficiently",
+  //     "Often rushed, Feel pressured",
+  //     "Social things are important",
+  //     "Like to finish what I start"], ["C", "D", "I", "S"], ["-", "D", "I", "S"]
+  // ],
+  // [
+  //   ["Resist sudden change",
+  //     "Tend to over promise",
+  //     "Withdraw under pressure",
+  //     "Not afraid to fight"], ["S", "I", "-", "-"], ["-", "I", "C", "D"]
+  // ],
+  // [
+  //   ["A good encourager",
+  //     "A good listener",
+  //     "A good analyzer",
+  //     "A good delegator"], ["I", "S", "C", "D"], ["I", "S", "C", "D"]
+  // ],
+  // [
+  //   ["Results are what matter",
+  //     "Do it right, Accuracy counts",
+  //     "Make it enjoyable",
+  //     "Let's do it together"], ["D", "C", "-", "-"], ["D", "C", "I", "S"]
+  // ],
+  // [
+  //   ["Will do without, Self-controlled",
+  //     "Will buy on impulse",
+  //     "Will wait, No pressure",
+  //     "Will spend on what I want"], ["-", "D", "S", "I"], ["C", "D", "S", "-"]
+  // ],
+  // [
+  //   ["Friendly, Easy to be with",
+  //     "Unique, Bored by routine",
+  //     "Actively change things",
+  //     "Want things exact"], ["S", "-", "D", "C"], ["-", "I", "D", "C"]
+  // ],
+  // [
+  //   ["Non-confrontational, Giving in",
+  //     "Overloaded with details",
+  //     "Changes at the last minute",
+  //     "Demanding, Abrupt"], ["-", "C", "I", "D"], ["S", "-", "I", "D"]
+  // ],
+  // [
+  //   ["Want advancement",
+  //     "Satisfied with things, Content",
+  //     "Openly display feelings",
+  //     "Humble, Modest"], ["D", "S", "I", "-"], ["D", "-", "-", "C"]
+  // ],
+  // [
+  //   ["Cool, Reserved",
+  //     "Happy, Carefree",
+  //     "Pleasing, Kind",
+  //     "Bold, Daring"], ["C", "I", "S", "D"], ["C", "I", "-", "D"]
+  // ],
+  // [
+  //   ["Spend quality time with others",
+  //     "Plan for the future, Be prepared",
+  //     "Travel to new adventures",
+  //     "Receive rewards for goals met"], ["S", "C", "I", "D"], ["S", "-", "I", "D"]
+  // ],
+  // [
+  //   ["Rules need to be challenged",
+  //     "Rules make it fair",
+  //     "Rules make it boring",
+  //     "Rules make it safe"], ["-", "C", "I", "S"], ["D", "-", "I", "S"]
+  // ],
+  // [
+  //   ["Education, Culture",
+  //     "Achievements, Awards",
+  //     "Safety, Security",
+  //     "Social, Group Gatherings"], ["-", "D", "S", "I"], ["C", "D", "S", "-"]
+  // ],
+  // [
+  //   ["Take charge, Direct approach",
+  //     "Outgoing, Enthusiastic",
+  //     "Predictable, Consistent",
+  //     "Cautious, Careful"], ["D", "-", "-", "C"], ["D", "I", "S", "-"]
+  // ],
+  // [
+  //   ["Not easily defeated",
+  //     "Will do as told, Follows leader",
+  //     "Excitable, Cheerful",
+  //     "Want things orderly, Neat"], ["D", "S", "I", "-"], ["D", "-", "I", "C"]
+  // ],
+  // [
+  //   ["I will lead them",
+  //     "I will follow through",
+  //     "I will persuade them",
+  //     "I will get the facts"], ["D", "S", "I", "C"], ["-", "S", "I", "-"]
+  // ],
+  // [
+  //   ["Think of others first",
+  //     "Competitive, Like a challenge",
+  //     "Optimistic, Positive",
+  //     "Logical thinker, Systematic"], ["S", "D", "I", "-"], ["S", "D", "I", "C"]
+  // ],
+  // [
+  //   ["Please others, Agreeable",
+  //     "Laugh out loud, Animated",
+  //     "Courageous, Bold",
+  //     "Quiet, Reserved"], ["S", "-", "D", "C"], ["S", "I", "D", "C"]
+  // ],
+  // [
+  //   ["Want more authority",
+  //     "Want new opportunities",
+  //     "Avoid any conflict",
+  //     "Want clear directions"], ["-", "I", "S", "-"], ["D", "-", "S", "C"]
+  // ],
+  // [
+  //   ["Reliable, Dependable",
+  //     "Creative, Unique",
+  //     "Bottom line, Results oriented",
+  //     "Hold high standards, Accurate"], ["-", "I", "D", "C"], ["S", "I", "-", "-"]
+  // ]
 ]
 
 most_classification = {
@@ -581,8 +581,8 @@ function finalCard(public_result, private_result, perceived_result) {
 
 function nextCard() {
   let questions = getNext()
-  return `<div class="card grey darken-3 animate__animated animate__backInRight">
-            <div class="card-content white-text">
+  return `<div class="card grey lighten-3 animate__animated animate__backInRight">
+            <div class="card-content">
               <div class="row">
                 <span
                   class="col s2 l2 card-title longer"
@@ -697,8 +697,8 @@ function nextCard() {
 
 function prevCard() {
   let questions = getPrev()
-  return `<div class="card grey darken-3 animate__animated animate__backInLeft">
-            <div class="card-content white-text">
+  return `<div class="card grey lighten-3 animate__animated animate__backInLeft">
+            <div class="card-content">
               <div class="row">
                 <span
                   class="col s2 l2 card-title longer"
