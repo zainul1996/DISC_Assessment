@@ -2,12 +2,24 @@
   .col.s8.l8 {
     font-size: 12.3px;
   }
-  [type="radio"]:not(:checked) + span,
+  /* [type="radio"]:not(:checked) + span,
   [type="radio"]:checked + span {
     padding-left: 22px;
     border: 0px;
     width: 50%;
     height: 1.5em;
+  } */
+
+  [type="radio"]:not(:checked) + span,
+  [type="radio"]:checked + span {
+    height: 1.73em !important;
+  }
+
+  @-moz-document url-prefix() {
+    [type="radio"]:not(:checked) + span,
+    [type="radio"]:checked + span {
+      height: 1.5em !important;
+    }
   }
 }
 
@@ -90,4 +102,16 @@ body {
 [type="radio"].with-gap:checked + span::before,
 [type="radio"].with-gap:checked + span::after {
   border: 2px solid black;
+}
+
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+  height: 2em;
+}
+
+@-moz-document url-prefix() {
+  [type="radio"]:not(:checked) + span,
+  [type="radio"]:checked + span {
+    height: 1.73em;
+  }
 }
