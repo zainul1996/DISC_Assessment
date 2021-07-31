@@ -1032,14 +1032,26 @@ function renderPrevCard() {
     )
   }
 }
-function openModal() {
+function openModal1() {
   const elem = document.getElementById('modal1');
   const instance = M.Modal.init(elem, { dismissible: false });
   instance.open();
 }
 
-function closeModal() {
+function closeModal1() {
   const elem = document.getElementById('modal1');
+  const instance = M.Modal.init(elem, { dismissible: false });
+  instance.close();
+}
+
+function openModal2() {
+  const elem = document.getElementById('modal2');
+  const instance = M.Modal.init(elem, { dismissible: false });
+  instance.open();
+}
+
+function closeModal2() {
+  const elem = document.getElementById('modal2');
   const instance = M.Modal.init(elem, { dismissible: false });
   instance.close();
 }
@@ -1047,6 +1059,8 @@ function closeModal() {
 $(document).ready(() => {
   renderFirstCard()
   if ($(window).width() <= 767) {
-    openModal()
+    openModal1()
+  } else {
+    openModal2()
   }
 })
