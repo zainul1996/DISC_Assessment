@@ -1032,19 +1032,21 @@ function renderPrevCard() {
     )
   }
 }
-
-if ($(window).width() < 767) {
-
-} else {
-  // alert("big")
+function openModal() {
+  const elem = document.getElementById('modal1');
+  const instance = M.Modal.init(elem, { dismissible: false });
+  instance.open();
 }
 
+function closeModal() {
+  const elem = document.getElementById('modal1');
+  const instance = M.Modal.init(elem, { dismissible: false });
+  instance.close();
+}
 
 $(document).ready(() => {
   renderFirstCard()
-  if ($(window).width() < 767) {
-    $('.modal').modal();
-    $('.modal').modal('open');
+  if ($(window).width() <= 767) {
+    openModal()
   }
-
 })
