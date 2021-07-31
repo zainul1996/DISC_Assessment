@@ -1031,9 +1031,20 @@ function renderPrevCard() {
     }
     )
   }
-
 }
+
+if ($(window).width() < 767) {
+
+} else {
+  // alert("big")
+}
+
 
 $(document).ready(() => {
   renderFirstCard()
+  if ($(window).width() < 767) {
+    $('.modal').modal();
+    $('.modal').modal('open');
+  }
+
 })
