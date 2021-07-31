@@ -2,6 +2,13 @@
   .col.s8.l8 {
     font-size: 12.3px;
   }
+  [type="radio"]:not(:checked) + span,
+  [type="radio"]:checked + span {
+    padding-left: 22px;
+    border: 0px;
+    width: 50%;
+    height: 1.5em;
+  }
 }
 
 @media screen and (max-width: 767px) {
